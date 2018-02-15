@@ -1,18 +1,3 @@
-# znamka
-# model
-# število prevoženih kilometrov
-# datum zadnjega servisa
-
-# Program naj omogoča uporabniku naslednje:
-#
-# Ogled seznama vozil (voznega parka)
-# urejati število prevoženih kilometrov za vsako vozilo
-# urejati datum zadnjega servisa za vsako vozilo
-# dodati novo vozilo
-# izbrisati vozilo s seznama
-# Podatke o vozilih shrani v TXT datoteko.
-
-
 # Define model for all vehicles
 
 class Vehicle:
@@ -82,6 +67,9 @@ def edit_service(car_park):
 
     print('')
     id_num = input('ID num: ... ')
+    if id_num != car_park[int(id_num)]:
+        print('That ID does not extist')
+
     selected_id = car_park[int(id_num)]
 
     new_service = input('Enter mileage value for {}: '.format(selected_id.vehicle_info()))
@@ -118,12 +106,12 @@ def main():
     while True:
         print("""
 Select options:
-1) Show me current Car Park
+1) Show current Car Park
 2) Add new vehicle
 3) Edit vehicles mileage
 4) Edit vehicles service date
-5) Delete vehicle from your Car Park
-q) QUIT PROGRAM\n""")
+5) Delete vehicle from Car Park
+q) Save & Exit \n""")
 
         selection = input('Select action: ')
 

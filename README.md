@@ -1,2 +1,3 @@
 # Vozila
-Vehicle manager - smartni ninja project
+Vehicle manager - Smartninja project
+Logging - editing - deleting
